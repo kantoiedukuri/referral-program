@@ -29,7 +29,6 @@
         }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
         .stagger-item { opacity: 0; transform: translateY(20px); transition: all 0.6s ease-out; }
@@ -38,11 +37,6 @@
         .bg-wood { background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png'); }
         .btn-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .btn-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(230, 126, 34, 0.5); }
-        
-        /* カスタムスクロールバー */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #E67E22; border-radius: 4px; }
     </style>
 </head>
 <body class="bg-scandi-white text-scandi-text font-sans leading-relaxed">
@@ -50,7 +44,7 @@
     <!-- Navigation -->
     <nav class="fixed w-full z-50 glass-nav border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="font-serif font-bold text-lg md:text-xl tracking-wider text-scandi-dark">
+            <div class="font-serif font-bold text-xl tracking-wider text-scandi-dark">
                 紹介制・売り建て注文住宅サポート
             </div>
             <div class="hidden md:flex gap-8 items-center">
@@ -65,14 +59,15 @@
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" alt="北欧風の明るいリビング" class="w-full h-full object-cover opacity-40">
+            <!-- REPLACE: メインビジュアル。北欧風の明るく温かみのあるリビング写真 -->
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000" alt="Beautiful Scandinavian Interior" class="w-full h-full object-cover opacity-30">
         </div>
         <div class="max-w-7xl mx-auto px-6 relative z-10 py-20 lg:py-32">
             <div class="max-w-3xl">
-                <span class="inline-block px-4 py-1 mb-6 border border-scandi-accent text-scandi-accent font-bold text-sm tracking-widest rounded-full reveal">1都3県限定・紹介制サポート</span>
-                <h1 class="font-serif text-4xl md:text-6xl font-bold leading-tight mb-8 reveal" style="transition-delay: 200ms;">
-                    同じ図面・同じ仕様なのに、<br class="hidden md:block">
-                    なぜ<span class="text-scandi-accent">10〜20％</span>も金額が変わるのか？
+                <span class="inline-block px-4 py-1 mb-6 border border-scandi-accent bg-white/70 backdrop-blur-sm text-scandi-accent font-bold text-sm tracking-widest rounded-full reveal">1都3県限定・紹介制サポート</span>
+                <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 reveal" style="transition-delay: 200ms;">
+                    同じ図面・仕様なのに、<br class="hidden md:block">
+                    なぜ金額が<span class="text-scandi-accent">10〜20％</span>も変わるのか？
                 </h1>
                 <p class="text-lg md:text-xl text-scandi-dark mb-10 leading-relaxed reveal" style="transition-delay: 400ms;">
                     「営業ガチャ」に疲れ、見積に不安を抱えていませんか？<br>
@@ -98,46 +93,46 @@
     <section id="problem" class="py-24 md:py-32 bg-scandi-gray bg-wood">
         <div class="max-w-5xl mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6 reveal">展示場を回るほど、何が正解か<br class="md:hidden">分からなくなっていませんか？</h2>
+                <h2 class="font-serif text-2xl md:text-4xl font-bold mb-6 reveal leading-snug">展示場を回るほど、何が正解か<br class="md:hidden">分からなくなっていませんか？</h2>
                 <div class="w-20 h-1 bg-scandi-accent mx-auto reveal"></div>
             </div>
             
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white p-8 rounded-2xl shadow-sm reveal">
-                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-scandi-dark">
-                        <span class="text-scandi-accent text-xl">●</span> 表の悩み
+                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                        <span class="text-scandi-accent">●</span> 表の悩み（自覚している苦悩）
                     </h3>
                     <ul class="space-y-4 text-scandi-dark">
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 text-red-400 font-bold">✕</span>
+                            <span class="mt-1 text-red-400">✕</span>
                             <span>この見積、本当に妥当なの？と疑ってしまう</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 text-red-400 font-bold">✕</span>
+                            <span class="mt-1 text-red-400">✕</span>
                             <span>「今決めてくれたら安くする」という言葉が信用できない</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 text-red-400 font-bold">✕</span>
+                            <span class="mt-1 text-red-400">✕</span>
                             <span>営業さんはいい人だけど、会社に有利な提案をされてないか不安</span>
                         </li>
                     </ul>
                 </div>
                 <div class="bg-white p-8 rounded-2xl shadow-sm reveal" style="transition-delay: 200ms;">
-                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-scandi-dark">
-                        <span class="text-scandi-accent text-xl">●</span> 裏の悩み
+                    <h3 class="font-bold text-lg mb-4 flex items-center gap-2">
+                        <span class="text-scandi-accent">●</span> 裏の悩み（言葉にできない不安）
                     </h3>
                     <ul class="space-y-4 text-scandi-dark">
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 text-red-400 font-bold">✕</span>
+                            <span class="mt-1 text-red-400">✕</span>
                             <span>知らないだけで、何百万円も損をしている気がする</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 text-red-400 font-bold">✕</span>
+                            <span class="mt-1 text-red-400">✕</span>
                             <span>あとから「あっちが安かった」と後悔するのだけは避けたい</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="mt-1 text-red-400 font-bold">✕</span>
-                            <span>何を基準に「正しい」と判断すればいいか分からない</span>
+                            <span class="mt-1 text-red-400">✕</span>
+                            <span>でも、何を基準に「正しい」と判断すればいいか分からない</span>
                         </li>
                     </ul>
                 </div>
@@ -150,10 +145,10 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row items-center gap-16">
                 <div class="lg:w-1/2 reveal">
-                    <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=1200" alt="建築図面と打ち合わせの様子" class="rounded-3xl shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=1200" alt="Architecture Plan" class="rounded-3xl shadow-2xl">
                 </div>
                 <div class="lg:w-1/2">
-                    <h2 class="font-serif text-3xl md:text-5xl font-bold mb-8 reveal leading-tight">
+                    <h2 class="font-serif text-2xl md:text-4xl lg:text-5xl font-bold mb-8 reveal leading-tight">
                         200万円以上の差が出る、<br>注文住宅の「価格の正体」。
                     </h2>
                     <p class="text-lg text-scandi-dark mb-8 reveal" style="transition-delay: 200ms;">
@@ -190,13 +185,14 @@
     <!-- Benefit Section -->
     <section id="benefit" class="py-24 md:py-32 bg-scandi-dark text-white">
         <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-16 reveal">価格に振り回されず、<br class="md:hidden">「本当に建てたい家」に予算をかける。</h2>
+            <!-- 不自然な改行を避けるためフォントサイズを微調整 (text-3xl -> text-2xl, md:text-4xl -> md:text-3xl) -->
+            <h2 class="font-serif text-2xl md:text-3xl font-bold mb-16 reveal leading-relaxed">価格に振り回されず、<br class="md:hidden">「本当に建てたい家」に予算をかける。</h2>
             
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="stagger-item">
                     <div class="text-scandi-accent text-5xl mb-6 font-serif italic">Benefit 01</div>
                     <h4 class="text-xl font-bold mb-4">値引き交渉不要の<br>ストレスフリー</h4>
-                    <p class="text-gray-400 text-sm">駆け引きに疲れ、後から「損をしたかも」と悩む必要はありません。</p>
+                    <p class="text-gray-400 text-sm">駆け引きに疲れる必要はありません。最初から適正価格が提示される安心感を提供します。</p>
                 </div>
                 <div class="stagger-item">
                     <div class="text-scandi-accent text-5xl mb-6 font-serif italic">Benefit 02</div>
@@ -223,21 +219,21 @@
             <div class="space-y-12">
                 <div class="flex flex-col md:flex-row gap-8 items-center reveal">
                     <div class="w-20 h-20 bg-scandi-accent text-white rounded-full flex items-center justify-center text-3xl font-bold flex-shrink-0">1</div>
-                    <div class="bg-scandi-gray p-8 rounded-2xl flex-grow w-full">
+                    <div class="bg-scandi-gray p-8 rounded-2xl flex-grow">
                         <h4 class="font-bold text-xl mb-2">無料オンラインヒアリング</h4>
                         <p class="text-scandi-dark">現在の検討状況や、理想の家づくりのこだわりをお伺いします。</p>
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row gap-8 items-center reveal">
                     <div class="w-20 h-20 bg-scandi-accent text-white rounded-full flex items-center justify-center text-3xl font-bold flex-shrink-0">2</div>
-                    <div class="bg-scandi-gray p-8 rounded-2xl flex-grow w-full">
+                    <div class="bg-scandi-gray p-8 rounded-2xl flex-grow">
                         <h4 class="font-bold text-xl mb-2">現状見積の診断・分析</h4>
                         <p class="text-scandi-dark">既に見積をお持ちの場合は、その内容が市場価値に対して妥当かを客観的に分析します。</p>
                     </div>
                 </div>
                 <div class="flex flex-col md:flex-row gap-8 items-center reveal">
                     <div class="w-20 h-20 bg-scandi-accent text-white rounded-full flex items-center justify-center text-3xl font-bold flex-shrink-0">3</div>
-                    <div class="bg-scandi-gray p-8 rounded-2xl flex-grow w-full">
+                    <div class="bg-scandi-gray p-8 rounded-2xl flex-grow">
                         <h4 class="font-bold text-xl mb-2">最適な建築会社の選定・ご紹介</h4>
                         <p class="text-scandi-dark">中間コストを排除し、あなたの希望を予算内で叶えられる優良建築会社をご紹介します。</p>
                     </div>
@@ -271,7 +267,7 @@
 
     <!-- Footer -->
     <footer class="bg-white py-12 border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="font-serif font-bold text-scandi-dark">
                 紹介制・売り建て注文住宅サポート
             </div>
@@ -286,7 +282,6 @@
     </footer>
 
     <script>
-        // Intersection Observer for Reveal Animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: "0px 0px -50px 0px"
@@ -296,49 +291,24 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    
-                    // Stagger items logic if any within this container
                     const staggers = entry.target.querySelectorAll('.stagger-item');
                     staggers.forEach((item, index) => {
                         setTimeout(() => {
                             item.classList.add('active');
                         }, index * 150);
                     });
-                    
-                    // Once revealed, unobserve to stop repeating the animation
-                    revealObserver.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-        
-        // Also observe direct staggers if they are not inside a .reveal
-        document.querySelectorAll('.stagger-item').forEach(el => {
-            if (!el.closest('.reveal')) {
-                revealObserver.observe(el);
-            }
-        });
 
-        // Smooth Scroll handling for Safari/Older browsers
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    const offset = 80; // height of fixed nav
-                    const bodyRect = document.body.getBoundingClientRect().top;
-                    const elementRect = targetElement.getBoundingClientRect().top;
-                    const elementPosition = elementRect - bodyRect;
-                    const offsetPosition = elementPosition - offset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
     </script>
